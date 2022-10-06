@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.content{
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: 30% 50% 20%; 
+    row-gap: 1rem;
+    column-gap: 1rem;*/
+    grid-template-columns: 2fr 8fr 2fr;
+    column-gap: 1rem;
+    /* grid-gap: 1rem; */
+    /* grid-template-rows: 0.5fr 2fr 0.5fr; */
+}
+
+.box{
+    padding: 1rem;
+    background: slateblue;
+    color: #fff;
+    text-align: center;
+}
