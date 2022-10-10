@@ -3,194 +3,227 @@
     margin: 0;
     padding: 0;
 }
-
 html{
     font-size: 62.5%;
 }
-
 body{
+    display: grid;
+    grid-gap: 0.3rem;
+    grid-template: 
+        "header" 10%
+        "sectionder"20%
+        "main" auto
+        "sectionizq" auto
+        "footer" 10%/
+            100vw
+    ;
+    height: 100vh;
+}
+/*styles of header*/
+header{
+    grid-area: header;
+    background: linear-gradient(0deg, rgb(39, 95, 207) 0%, rgba(1,55,93,1) 100%); 
+    color: aliceblue;
+}
+header .foto_nombre{
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header .foto_nombre .foto{
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: lightblue;
 }
-.container_izq{
-    color: #fcfdf9;
-    background: linear-gradient(0deg, rgb(39, 95, 207) 0%, rgba(1,55,93,1) 100%);
-    grid-area: container_izq;
+header .foto_nombre .foto figure{
+    width: 8rem;
+    height: 8rem;
+    background-color: aqua;
+    border-radius: 50%;
+}
+header .foto_nombre .nombre{
+    width: 70%;
+    height: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
-.container_izq h2{
-    padding-bottom: 15px;
-}
-.container_der{
-    background-color: rgba(248, 248, 248, 1);
-    grid-area: container_der;
-     padding-left: 1rem; 
-    padding-right: 0;
+
+
+.sectionizq{
+    grid-area: sectionizq;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.sectionizq .contacto{
+    margin-top: .5rem;
+}
+.sectionizq .contacto h2{
+    text-align: center;
+    
+}
+
+.sectionizq .contacto .list_cot{
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sectionizq .contacto .list_cot .icon{
+    width: 30%;
+    text-align: center; 
+}
+
+.sectionizq .contacto .list_cot .text_cot{
+    width: 70%;
+}
+
+.sectionizq .software h2{
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.sectionizq .software ul{
+    margin-top: 0.5rem;
+}
+.sectionizq .software ul li{
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+.sectionizq .software ul li label{
+    width: 30%;
+    text-align: center;
+}
+
+.sectionizq .software ul li progress{
+    width: 60%;
+    height: 1.5rem;
+    text-align: center;
+}
+.sectionder{
+    grid-area: sectionder;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sectionder h3{
+    width: 100%;
+    text-align: center;
+}
+
+.sectionder p{
+    width: 100%;
+    margin-top: .5rem;
 }
 
 main{
-    max-width: 778px;
-    min-width: 310px;
-    height: 100%;
-    display: grid;
-    column-gap: .3rem;
-    grid-template: 
-        "container_izq container_der" 100%/
-            35%            75% 
-    ;
-}
-
-
-figure{
-    margin-top: 2rem;
-    width: 10rem;
-    height: 10rem;
-    background-color: rgb(76, 114, 241);
-    border-radius: 70%;
-}
-.contacto{
-    width: 100%;
-    margin-top: .5rem;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     
 }
-.contacto h2{
-    font-weight: 300;
+
+main .informacion h2{
+    text-align: center;
+    margin-top: .5rem;
+}
+
+main .informacion p{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main .educacion {
+    margin-top: .5rem;
+    width: 100%;
+    height: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+main .educacion h2{
     text-align: center;
 }
 
-.list_cot{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+main .educacion .box{
     width: 100%;
     height: auto;
-    align-items: center;
-}
-
-.icon{
-   
-   background-color: #fcfdf9;
-   padding: 4px 0 4px 0;
-   width: 40%;
-   border-radius: 0 10px 10px 0 ;
-   height: auto;
-   margin-top: .9rem;
-}
-
-.text_cot{
-    width: 60%;
-    text-align: center;
-}
-
-.fa_cot{  
-    color: rgba(1, 55, 93, 1); 
-    padding-left: 60%; 
-    font-size: 0.8rem;   
-}
-.habilidades{
-    
-    text-align: center;
+    display: flex;
+    flex-direction: row;
     margin-top: .5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     
 }
-.habilidades h2{
-    font-weight: 300;
+main .educacion .box .list_text label{
+    width: 100%;
+    padding-left: 1rem;
 }
 
-.nombre{
-    font-size: 2rem;
-    margin-top: 2rem;
-    padding-left: .3rem;
+footer{
+    grid-area: footer;
+    height: 100%;
+    width: 100%;
+    
+}
+
+footer .experiencia{
     display: flex;
     flex-direction: column;
+}
+
+footer .experiencia h2{
+    text-align: center;
+}
+
+footer .experiencia .box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: .5rem;
     align-items: center;
 }
-.nombre h1{
-    color: #1e1818;
-}
-.nombre h2{
-    font-weight: 300;
-    color:  rgba(1, 55, 93, 1);
-}
-
-.informacion{
-  width: 100%;  
-}
-
-.container_der .informacion  h3{
-    font-weight: 300;
-    color: rgba(1,55,93,1);
-}
-.container_der .informacion  h2{
-    font-weight: 300;
-    width: fit-content;
-    padding: 0rem 0.5rem 0.2rem;
-    color: #fcfdf9;
-    border-radius: 8px;
-    background: linear-gradient(0deg, rgb(39, 95, 207) 0%, rgba(1,55,93,1) 100%);
-    
-} 
-
-.educacion{
-    width: 100%;
-}
-.div_list{
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-.box{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 15px;
-}
-
-.list_year{
-    width: 10%;
-}
-.list_text{
-    width: 90%;
-}
-
-.hobbies{
-    width: 80%;
+footer .experiencia .box .list_year{
+    width: 30%;
     text-align: center;
-    margin: 3.5rem;
 }
-.list_hobies{
+footer .experiencia .box .list_text{
+    width: 70%;
+}
+footer .experiencia .box .list_text label{
     width: 100%;
+    padding-left: 1rem;
+}
+
+footer .hobbies{
+    margin-top: .5rem;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(0deg, rgb(39, 95, 207) 0%, rgba(1,55,93,1) 100%); 
+    color: aliceblue;
 }
 
-.fa_ho{
-    font-size: 2rem;
+footer .hobbies .list_hobies{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
 }
-ul {
-    list-style: none;
-}
-.container_izq progress{
-    height: 15px;
-    width: 80px;
-}
-
-
-

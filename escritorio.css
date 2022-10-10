@@ -1,35 +1,12 @@
-@media(min-width:920px){
-    /*style left*/
-    #figure{
-        width: 15rem;
-        height: 13rem;
-    }
-    .icon{
-        width: 30%;
-        padding: 4px 0 6px 0;
-    }
-    .fa_cot{
-        padding-left: 70%;
-        font-size: 1.3rem;
-    }
-
-    .fa_ho{
-        font-size: 2.3rem;
-    }
-
-    .container_izq progress {
-        height: 1.8rem;
-        width: 15rem;
-    }
-
-    /*style right*/
+@media(min-width:1020px){
     
-    .informacion{
-        width: 100%;
-        margin: 0 auto; 
+    body{
+        grid-template: 
+        "header header header" 10rem
+        "sectionizq sectionder main" auto
+        "footer footer footer" 10rem/
+          30%    auto 30% 
+        ;
     }
-
-    .box{
-        margin-bottom: 4rem;
-    }
+    
 }
